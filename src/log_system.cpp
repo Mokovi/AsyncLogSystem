@@ -30,7 +30,25 @@ void LogSystem::writeToConsole(const LogMessage& msg) {
 }
 
 std::string LogSystem::formatMessage(const LogMessage& msg) {
-    return msg.toString();
+    std::ostringstream oss;
+    
+    // 使用配置中的时间格式
+    oss << "[" << getCurrentTimestamp() << "] ";
+    
+    // 获取级别字符串
+    std::string levelStr;
+    switch (msg.level) {
+        case LogLevel::TRACE: levelStr = "TRACE"; break;
+        case LogLevel::DEBUG_LEVEL: levelStr = "DEBUG"; break;
+        case LogLevel::INFO:  levelStr = "INFO "; break;
+        case LogLevel::WARN:  levelStr = "WARN "; break;
+        case LogLevel::ERROR: levelStr = "ERROR"; break;
+        case LogLevel::FATAL: levelStr = "FATAL"; break;
+        default: levelStr = "UNKNOWN"; break;
+    }
+    
+    oss << "[" << levelStr << "] " << msg.message;
+    return oss.str();
 }
 
 std::string LogSystem::getCurrentTimestamp() {
