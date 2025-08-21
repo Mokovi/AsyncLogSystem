@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -g -g -O0 -DDEBUG   CMakeFiles/test_basic.dir/test_basic.cpp.o  -o test_basic  ../liblog_system.a /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a -lpthread 

@@ -29,6 +29,7 @@ find_package(Threads REQUIRED)
 set(SOURCES
     src/log_types.cpp
     src/log_system.cpp
+    src/async_log_system.cpp
 )
 # 把所有源文件列在一个变量中，方便复用（如创建库和测试时都用同一份源文件列表）。
 
@@ -36,6 +37,8 @@ set(SOURCES
 set(HEADERS
     include/log_types.h
     include/log_system.h
+    include/async_log_system.h
+    include/thread_safe_queue.h
 )
 # 这里把头文件也放到变量中，便于安装时统一拷贝（见后面的 install(FILES ...)）。
 
@@ -60,6 +63,10 @@ add_executable(log_system_main src/main.cpp)
 target_link_libraries(log_system_main log_system)
 # 将主程序与上面创建的库链接。
 # 这里没有显式设置 include 目录因为 log_system 的 PUBLIC include 已经传递给使用者（可执行）。
+
+# 异步日志演示程序
+add_executable(async_demo src/async_demo.cpp)
+target_link_libraries(async_demo log_system)
 
 # 测试
 enable_testing()
