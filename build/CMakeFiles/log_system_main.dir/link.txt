@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -g -g -O0 -DDEBUG   CMakeFiles/log_system_main.dir/src/main.cpp.o  -o log_system_main  liblog_system.a -lpthread 

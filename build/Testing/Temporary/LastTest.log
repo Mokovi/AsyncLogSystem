@@ -1,0 +1,46 @@
+Start testing: Aug 21 15:25 +08
+----------------------------------------------------------
+1/1 Testing: BasicTests
+1/1 Test: BasicTests
+Command: "/root/logSystem/build/tests/test_basic"
+Directory: /root/logSystem/build/tests
+"BasicTests" start time: Aug 21 15:25 +08
+Output:
+----------------------------------------------------------
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from LogSystemTest
+[ RUN      ] LogSystemTest.LogMessageBasic
+[       OK ] LogSystemTest.LogMessageBasic (0 ms)
+[ RUN      ] LogSystemTest.LogMessageToString
+[       OK ] LogSystemTest.LogMessageToString (0 ms)
+[ RUN      ] LogSystemTest.BasicLogging
+[2025-08-21 15:25:44] [INFO ] 测试信息
+[2025-08-21 15:25:44] [WARN ] 测试警告
+[2025-08-21 15:25:44] [ERROR] 测试错误
+[       OK ] LogSystemTest.BasicLogging (0 ms)
+[ RUN      ] LogSystemTest.LogLevelFiltering
+[       OK ] LogSystemTest.LogLevelFiltering (0 ms)
+[ RUN      ] LogSystemTest.ConfigManagement
+[       OK ] LogSystemTest.ConfigManagement (0 ms)
+[ RUN      ] LogSystemTest.ConsoleOutputToggle
+[       OK ] LogSystemTest.ConsoleOutputToggle (0 ms)
+[ RUN      ] LogSystemTest.SingletonPattern
+[       OK ] LogSystemTest.SingletonPattern (0 ms)
+[----------] 7 tests from LogSystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"BasicTests" end time: Aug 21 15:25 +08
+"BasicTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 21 15:25 +08
+
+unit =   0.00 sec*proc
+

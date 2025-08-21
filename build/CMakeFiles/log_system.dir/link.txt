@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblog_system.a  CMakeFiles/log_system.dir/src/log_types.cpp.o CMakeFiles/log_system.dir/src/log_system.cpp.o
+/usr/bin/ranlib liblog_system.a

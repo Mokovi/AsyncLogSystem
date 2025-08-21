@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -g -g -O0 -DDEBUG   CMakeFiles/basic_usage.dir/basic_usage.cpp.o  -o basic_usage  ../liblog_system.a -lpthread 
